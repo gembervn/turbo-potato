@@ -10,11 +10,11 @@ import com.gember.identity_service.exception.ErrorCode;
 import com.gember.identity_service.mapper.UserMapper;
 import com.gember.identity_service.repository.RoleRepository;
 import com.gember.identity_service.repository.UserRepository;
+
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.security.core.context.SecurityContext;
+
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -24,7 +24,6 @@ import java.util.HashSet;
 @Service
 @RequiredArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
-@Slf4j
 public class UserService {
     UserRepository userRepository;
     RoleRepository roleRepository;

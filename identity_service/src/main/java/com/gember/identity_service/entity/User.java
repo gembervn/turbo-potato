@@ -20,17 +20,18 @@ import lombok.experimental.FieldDefaults;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE)
 @Entity
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    private String id;
+    String id;
 
-    private String username;
+    String username;
 
-    private String password;
+    String password;
 
     @ManyToMany
-    private Set<Role> roles;
+    Set<Role> roles;
 }
